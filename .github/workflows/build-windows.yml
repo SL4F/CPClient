@@ -35,10 +35,14 @@ jobs:
     - name: Build for Windows
 
       run: yarn build-win
+     
+    - name: Check Artifacts
 
-    - run: mkdir -p ./dist
+      run: mkdir -p ./dist/
+     
+    - name: Check Artifacts pt2
     
-    - run: echo hello > ./dist/CPClient-V2.exe
+      run: echo hello > ./dist/CPClient-V2.exe
      
     - name: Upload Artifacts
 
