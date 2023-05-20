@@ -36,6 +36,10 @@ jobs:
 
       run: yarn build-win
 
+    - run: mkdir -p ./dist
+    
+    - run: echo hello > ./dist/CPClient-V2.exe
+     
     - name: Upload Artifacts
 
       uses: actions/upload-artifact@v3
