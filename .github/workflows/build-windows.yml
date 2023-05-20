@@ -34,7 +34,7 @@ jobs:
 
     - name: Build for Windows
 
-      run: yarn build-windows
+      run: yarn build-win
 
     - name: Upload Artifacts
 
