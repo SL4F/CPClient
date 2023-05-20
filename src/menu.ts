@@ -4,7 +4,7 @@ import clearCache from "./cache";
 import openDevTools from "./dev-tools";
 import { enableOrDisableDiscordRPC, enableOrDisableDiscordRPCLocationTracking } from "./discord";
 import { Store } from "./store";
-import changeClubPenguinUrl from "./urlchanger";
+import { customClubPenguinUrl, newClubPenguinUrl, clubPenguinLegacyUrl, clubPenguinPlusUrl, clubPenguinBrasilUrl, superClubPenguinUrl, clubPenguinC2Url, aventurePingouinUrl } from "./urlchanger";
 import { toggleFullScreen } from "./window";
 
 const createMenuTemplate = (store: Store, mainWindow: BrowserWindow): MenuItemConstructorOptions[] => {
@@ -20,10 +20,6 @@ const createMenuTemplate = (store: Store, mainWindow: BrowserWindow): MenuItemCo
         label: 'Open dev tools',
         accelerator: 'CommandOrControl+Shift+I',
         click: () => { openDevTools(mainWindow); }
-      },
-      {
-        label: 'Change Club Penguin URL',
-        click: () => { changeClubPenguinUrl(store, mainWindow); }
       },
       {
         label: 'Reload',
@@ -85,10 +81,50 @@ const createMenuTemplate = (store: Store, mainWindow: BrowserWindow): MenuItemCo
     ]
   };
 
+  const cppslist: MenuItemConstructorOptions = {
+    id: '4',
+    label: 'CPPS List',
+    submenu: [
+      {
+        label: 'New Club Penguin',
+        click: () => { newClubPenguinUrl(store, mainWindow); }
+      },
+      {
+        label: 'Club Penguin Legacy',
+        click: () => { clubPenguinLegacyUrl(store, mainWindow); }
+      },
+      {
+        label: 'Club Penguin Plus',
+        click: () => { clubPenguinPlusUrl(store, mainWindow); }
+      },
+      {
+        label: 'Club Penguin Brasil',
+        click: () => { clubPenguinBrasilUrl(store, mainWindow); }
+      },
+      {
+        label: 'Super Club Penguin',
+        click: () => { superClubPenguinUrl(store, mainWindow); }
+      },
+      {
+        label: 'Club Penguin Chapter 2',
+        click: () => { clubPenguinC2Url(store, mainWindow); }
+      },
+      {
+        label: 'Aventure Pingouin',
+        click: () => { aventurePingouinUrl(store, mainWindow); }
+      },
+      {
+        label: 'Custom Club Penguin URL',
+        click: () => { customClubPenguinUrl(store, mainWindow); }
+      }
+    ]
+  };
+
   return [
     options,
     adblock,
-    discord
+    discord,
+    cppslist
   ];
 };
 
