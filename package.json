@@ -1,6 +1,6 @@
 {
   "name": "cpclient",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "CP Client",
   "main": "./compiled/main.js",
   "scripts": {
@@ -14,11 +14,11 @@
     "build-linux": "electron-builder build --linux --ia32 --x64 --publish never --x64"
   },
   "bugs": {
-    "url": "https://github.com/renanrcp/CPClient/issues"
+    "url": "https://github.com/sl4f/CPClient/issues"
   },
-  "homepage": "https://github.com/renanrcp/CPClient/#readme",
-  "repository": "https://github.com/renanrcp/CPClient",
-  "author": "renanrcp",
+  "homepage": "https://github.com/sl4f/CPClient/#readme",
+  "repository": "https://github.com/sl4f/CPClient",
+  "author": "sl4f",
   "license": "MIT",
   "build": {
     "electronDist": "node_modules/electron/dist",
