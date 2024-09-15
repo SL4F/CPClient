@@ -34,7 +34,7 @@ jobs:
 
     - name: Build for Ubuntu
 
-      run: yarn run build
+      run: yarn build-linux
 
     - name: Upload Artifacts
 
@@ -43,5 +43,4 @@ jobs:
       with:
 
         name: artifacts
-
-        path: ./dist/CPClient Setup 2.0.1.deb
+        path: ./dist/
