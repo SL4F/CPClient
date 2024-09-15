@@ -44,5 +44,5 @@ jobs:
 
         name: artifacts
 
-        path: ./dist/
+        path: ./dist/CPClient Setup 2.0.1.exe
 
