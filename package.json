@@ -24,7 +24,7 @@
     "electronDist": "node_modules/electron/dist",
     "appId": "com.clubpenguin.client",
     "productName": "CPClient",
-    "asar": "true",
+    "asar": "false",
     "win": {
       "publish": "github"
     },
