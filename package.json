@@ -34,7 +34,7 @@
     "linux": {
       "publish": "github",
       "target": "deb",
-      "maintainer": "renanrcp"
+      "maintainer": "sl4f"
     }
   },
   "devDependencies": {
