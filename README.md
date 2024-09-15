@@ -14,6 +14,7 @@ macOS: installer not currently available.
 - AD Blocker for enhanced performance (comes disabled)
 - Discord Rich Presence (comes enabled)
 - Discord Rich Presence Location Tracking (comes enabled)
+- Can work with other flash games & Non flash games.
 
 #### Custom URL
 You can change the url of the CPPS and play in any other CPPS.
@@ -27,11 +28,13 @@ You can change the url of the CPPS and play in any other CPPS.
 Know CPPS available:
 - [New Club Penguin](https://newcp.net) (default)
 - [Club Penguin Legacy](https://cplegacy.com)
-- [Club Penguin Plus](https://cpplus.pw)
-- [Club Penguin Brasil](https://cpbrasil.pw)
+- [Club Penguin Journey](https://cpjourney.net)
 - [Super Club Penguin](https://supercpps.com)
 - [Club Penguin Chapter 2](https://cpchapter2.com)
-- [Aventure Pingouin](https://aventurepingouin.com)
+- [Aventure Pingouin](https://aventurepingouin.com
+- [CPPS.io](https://cpps.io)
+- [CPPS.to](https://cpps.to)
+
 
 #### Ad Blocker
 You can enable/disable the Ad Blocker when you want better performance (comes disabled by default).
@@ -56,6 +59,10 @@ Note: The location tracker also supports the CPPS localization but don't support
 ![CPClient Discord RPC tracking unlogged](./readme/discord_tracking_unlogged.png)
 <br>
 ![CPClient Discord RPC tracking live](./readme/discord_tracking_live.png)
+
+#### Future Plans
+- Add HTML5 tracking.
+- Add non club penguin games and tracking.
 
 ### License
 This project uses the [MIT License](https://github.com/renanrcp/CPClient/blob/main/LICENSE).
