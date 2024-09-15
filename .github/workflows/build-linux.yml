@@ -34,7 +34,7 @@ jobs:
 
     - name: Build for Ubuntu
 
-      run: yarn build
+      run: yarn run build
 
     - name: Upload Artifacts
 
