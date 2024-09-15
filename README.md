@@ -31,7 +31,7 @@ Know CPPS available:
 - [Club Penguin Journey](https://cpjourney.net)
 - [Super Club Penguin](https://supercpps.com)
 - [Club Penguin Chapter 2](https://cpchapter2.com)
-- [Aventure Pingouin](https://aventurepingouin.com
+- [Aventure Pingouin](https://aventurepingouin.com)
 - [CPPS.io](https://cpps.io)
 - [CPPS.to](https://cpps.to)
 
