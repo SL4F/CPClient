@@ -10,7 +10,7 @@ const setUrlFromStore = (store: Store, url: string) => {
     store.public.set('url', url);
 };
 
-const customClubPenguinUrl = async (store: Store, mainWindow: BrowserWindow) => {
+const customUrl = async (store: Store, mainWindow: BrowserWindow) => {
     const url = getUrlFromStore(store);
 
     const confirmationResult = await dialog.showMessageBox(mainWindow, {
