@@ -35,10 +35,10 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build-tsc && electron ./compiled/main.js
+        run: yarn run start
 
       - name: Lint
-        run: eslint -c .eslintrc --ext .ts ./src
+        run: yarn run lint
 
       #- name: Make and Publish (Ubuntu)
       #  if: startsWith(matrix.os, 'ubuntu')
