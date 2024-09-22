@@ -1,6 +1,5 @@
 {
   "name": "cpclient",
-  "productName": "CPClient",
   "version": "2.0.1",
   "description": "CP Client",
   "main": "./compiled/main.js",
@@ -19,14 +18,13 @@
   },
   "homepage": "https://github.com/sl4f/CPClient/#readme",
   "repository": "https://github.com/sl4f/CPClient",
-  "author": "SL4F",
+  "author": "sl4f",
   "license": "MIT",
   "build": {
     "electronDist": "node_modules/electron/dist",
     "appId": "com.clubpenguin.client",
     "productName": "CPClient",
-    "copyright": "Copyright © 2024 ${author}",
-    "asar": "true",
+    "asar": "false",
     "win": {
       "publish": "github"
     },
@@ -39,17 +37,6 @@
       "maintainer": "sl4f"
     }
   },
-  "dependencies": {
-    "@cliqz/adblocker-electron": "^1.25.2",
-    "cross-fetch": "^3.1.5",
-    "discord-rpc": "^4.0.1",
-    "electron-fetch": "^1.9.1",
-    "electron-is-dev": "^2.0.0",
-    "electron-log": "^5.0.0-beta.16",
-    "electron-prompt": "^1.6.0",
-    "electron-store": "^8.1.0",
-    "electron-updater": "^5.3.0"
-  },
   "devDependencies": {
     "@types/discord-rpc": "^4.0.3",
     "@types/electron-prompt": "^1.6.1",
@@ -57,11 +44,22 @@
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "copyfiles": "^2.4.1",
-    "electron": "11.1.1",
+    "electron": "^11.3.0",
     "electron-builder": "^22.2.0",
     "eslint": "^8.34.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "rimraf": "^4.1.2",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.25.2",
+    "cross-fetch": "^3.1.5",
+    "discord-rpc": "^4.0.1",
+    "electron-fetch": "^1.9.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^5.0.0-beta.16",
+    "electron-prompt": "^1.7.0",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^5.3.0"
   }
 }
