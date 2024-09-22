@@ -4,7 +4,7 @@
   "description": "CP Client",
   "main": "./compiled/main.js",
   "scripts": {
-    "clean": "./compiled/",
+    "clean": "rimraf compiled/",
     "copy-files": "copyfiles -u 1 assets/**/* assets/* compiled/assets/",
     "build-tsc": "yarn clean && tsc && yarn copy-files",
     "start": "yarn build-tsc && electron ./compiled/main.js",

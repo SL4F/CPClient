@@ -31,8 +31,11 @@ jobs:
         with:
           node-version: '16.x'
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Build
-        run: yarn start
+        run: start
 
       - name: Lint
         run: yarn lint
