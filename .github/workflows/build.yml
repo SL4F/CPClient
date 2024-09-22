@@ -46,7 +46,7 @@ jobs:
 
       - name: Make and Publish (WINDOWS)
         if: startsWith(matrix.os, 'windows')
-        run: yarn build-win
+        run: npm build-win
         
       #- name: Make and Publish (MAC)
       #  if: startsWith(matrix.os, 'macos')
