@@ -35,10 +35,10 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn start
+        run: npm start
 
       - name: Lint
-        run: yarn lint
+        run: eslint -c .eslintrc --ext .ts ./src
 
       #- name: Make and Publish (Ubuntu)
       #  if: startsWith(matrix.os, 'ubuntu')
