@@ -37,11 +37,11 @@ jobs:
       - name: Build Typescript
         run: yarn build-tsc
 
-      - name: Make and Publish (Ubuntu)
-        if: startsWith(matrix.os, 'ubuntu')
-        run: yarn build-linux
-        env:
-          GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
+      #- name: Make and Publish (Ubuntu)
+      #  if: startsWith(matrix.os, 'ubuntu')
+      #  run: yarn build-linux
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
 
       - name: Make and Publish (WINDOWS)
         if: startsWith(matrix.os, 'windows')
