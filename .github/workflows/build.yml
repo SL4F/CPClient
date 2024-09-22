@@ -32,13 +32,13 @@ jobs:
           node-version: '16.x'
 
       - name: Install dependencies
-        run: npm i --force
+        run: npm i
 
       - name: Build
-        run: npm run start
+        run: npm start
 
       - name: Lint
-        run: npm run lint
+        run: npm lint
 
       #- name: Make and Publish (Ubuntu)
       #  if: startsWith(matrix.os, 'ubuntu')
