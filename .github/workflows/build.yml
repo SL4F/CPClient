@@ -35,10 +35,10 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn run start
+        run: yarn start
 
       - name: Lint
-        run: yarn run lint
+        run: yarn lint
 
       #- name: Make and Publish (Ubuntu)
       #  if: startsWith(matrix.os, 'ubuntu')
