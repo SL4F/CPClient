@@ -1,0 +1,66 @@
+
+
+
+
+name: Build CPClient
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push for production branch
+  push:
+    branches: 
+       - "**"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    name: Build CPClient
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16.x'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Typescript
+        run: yarn build-tsc
+
+      - name: Install
+        if: startsWith(matrix.os, 'ubuntu')
+        run: yarn build-linux
+
+      - name: Make and Publish (Ubuntu)
+        if: startsWith(matrix.os, 'ubuntu')
+        run: yarn run publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
+
+      - name: Make and Publish (WINDOWS)
+        if: startsWith(matrix.os, 'windows')
+        run: yarn build-win
+        env:
+          GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        
+      - name: Make and Publish (MAC)
+        if: startsWith(matrix.os, 'macos')
+        run: yarn build-mac
+        env:
+          GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+            name: artifacts
+            path: ./dist/
