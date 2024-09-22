@@ -37,13 +37,9 @@ jobs:
       - name: Build Typescript
         run: yarn build-tsc
 
-      - name: Install
-        if: startsWith(matrix.os, 'ubuntu')
-        run: yarn build-linux
-
       - name: Make and Publish (Ubuntu)
         if: startsWith(matrix.os, 'ubuntu')
-        run: yarn run publish
+        run: yarn build-linux
         env:
           GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
 
